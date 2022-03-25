@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnZero = new System.Windows.Forms.Button();
             this.btnPoint = new System.Windows.Forms.Button();
             this.btnPlus = new System.Windows.Forms.Button();
@@ -268,6 +269,8 @@
             this.Controls.Add(this.btnPlus);
             this.Controls.Add(this.btnPoint);
             this.Controls.Add(this.btnZero);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";

@@ -26,23 +26,29 @@ namespace Calculator
 
         private void btnPoint_Click(object sender, EventArgs e)
         {
-            textArea.Text += ".";
-            currentValue += ".";
+            if (!currentValue.Contains('.'))
+            {
+                textArea.Text += ".";
+                currentValue += ".";
+            }
         }
 
         private void btnOne_Click(object sender, EventArgs e)
         {
             textArea.Text += "1";
+            currentValue += "1";
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
             textArea.Text += "2";
+            currentValue += "2";
         }
 
         private void btnThree_Click(object sender, EventArgs e)
         {
             textArea.Text += "3";
+            currentValue += "3";
         }
 
         private void btnFour_Click(object sender, EventArgs e)
@@ -66,21 +72,25 @@ namespace Calculator
         private void btnSeven_Click(object sender, EventArgs e)
         {
             textArea.Text += "7";
+            currentValue += "7";
         }
 
         private void btnEight_Click(object sender, EventArgs e)
         {
             textArea.Text += "8";
+            currentValue += "9";
         }
 
         private void btnNine_Click(object sender, EventArgs e)
         {
             textArea.Text += "9";
+            currentValue += "9";
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             textArea.Text = "";
+            currentValue = "";
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
@@ -90,6 +100,7 @@ namespace Calculator
                 string text = textArea.Text.Trim();
                 string value = new DataTable().Compute(text, null).ToString();
                 textArea.Text = value;
+                currentValue = value;
             }
             catch (Exception E)
             {
@@ -100,21 +111,25 @@ namespace Calculator
         private void btnPlus_Click(object sender, EventArgs e)
         {
             textArea.Text += "+";
+            currentValue = "";
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
             textArea.Text += "-";
+            currentValue = "";
         }
 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
             textArea.Text += "*";
+            currentValue = "";
         }
 
         private void btnDivide_Click(object sender, EventArgs e)
         {
             textArea.Text += "/";
+            currentValue = "";
         }
     }
 }
